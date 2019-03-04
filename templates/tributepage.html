@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<link rel="stylesheet"
-      type="text/css"
-      href="/static/css/tribute.css"/>
-</head>
-    <body>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 <main class="wrapper" id="main">
  <!--==========================================
 Header contains title and sticky Navigation bar
 ===============================================-->
 <header>
+
+<nav class="navbar" id="navigate_div">
+<ul id="nav">
+  <li><a href="#bio">About</a></li>
+  <li><a href="#books_block">Books</a></li>
+  <li><a href="#movies">Movies</a></li>
+  <li><a href="#">Resources</a></li>
+</ul>
+</nav>
+
   <div class="title_block" id="logo">
     <div class="title" id="title">J.R.R. Tolkien
   <p>This is a tribute page to the writer of Lord of the Rings</p>
     </div>
 </div>
-
-<ul id="nav">
-  <li id="active"><a href="#bio">About</a></li>
-  <li><a href="#books_block">Books</a></li>
-  <li><a href="#movies">Movies</a></li>
-  <li><a href="#">Resources</a></li>
-</ul>
-
   </header>
   <!-- Class block will define three large blocks of content:
 =============================
@@ -41,29 +38,49 @@ A parent block with a grid for author's books
 
 
 
-  <div class="container" style="overflow-y: scroll; height:400px;" id="books_block">
-       <div class="aboutbookshelf" id="about_bookshelf">
-         <h1><p>THIS IS A BLOCK ABOUT BOOKS </p></h>
-    </div>
+  <div class="books_block" id="books_gallery">
 
-     <div class="bookshelf" id=bookshelf>
-        <div class="books book1"> 1</div>
-        <div class="books book2">2</div>
-        <div class="books book3">3</div>
-        <div class="books book4">4</div>
-        <div class="books book5">5</div>
-        <div class="books book6">6</div>
-        <div class="books book7">7</div>
-        <div class="books book8">8</div>
-        <div class="books book9">9</div>
-        <div class="books book10">10</div>
-        <div class="books book11">11</div>
-        <div class="books book12">12</div>
-     </div>
+        <div class="book_shlf">
+
+<h1>MYLOGO.COM</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+<p>Resize the browser window to see the responsive effect.</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
 
-  </div >
 
 
   </div>
@@ -72,10 +89,7 @@ A parent block with a grid for author's movies
 ==============================================-->
 <div class="container" id="movies">
 
-  <p><h1>THIS IS A BLOCK ABOUT MOVIES </h></>
-
-
-  </div>
+  <p><h1>THIS IS A BLOCK ABOUT MOVIES </h></></div>
 
 
  <!--=============================
@@ -83,13 +97,10 @@ Footer has to have a smooth scroll
 ==================================-->
 
 
-  <footer>
+  <footer class="my_footer" id="copyright">
 
     <p><h1>THIS IS A FOOTER </h></>
 
   </footer>
 
 </main>
-
-</body>
-</html>

@@ -1,9 +1,11 @@
+/* Common */
 html {
   background: url(https://www.tomswallpapers.com/pic/201512/1080x1920/tomswallpapers.com-32471.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -12,15 +14,51 @@ html {
   margin-left: 10%;
   margin-right: 10%;
 }
+#navigate_div{
+  background-color: green;
+  text-color: blue;
+}
+
+
+#navigate_div ul {
+  display: table;
+  width: 100%;
+}
+
+#navigate_div ul li {
+  list-style: none;
+  display: table-cell;
+  width: 25%;
+  padding-top: 10px;
+  padding-bottom:10px;
+
+}
+
+#navigate_div a{
+  font-family: 'gothic' Fallback 'Serif';
+  color: white;
+  font-size:14px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+#navigate_div a:hover{
+  background-color: orange;
+}
 
 .container {
+  position: relative;
   min-height: 60vh;
   min-width: auto;
   background: rgba(255, 255, 255, .8);
-  padding: 40, 20, 40, 20px;
-}
+  margin-bottom: 20vh;
 
-.title_block{
+}
+/* Applying the same style for the title bloc and a footer */
+.title_block, .my_footer {
      position: relative;
      width: auto;
      display:block;
@@ -29,91 +67,72 @@ html {
      margin-top: 30px;
      background: rgba(255, 255, 255, .8);
      justify-items: center;
+}
 
+#logo {
+  margin-bottom: 10vh;
+}
+
+/*================
+==================
+==================
+*/
+.books_block {
+  box-sizing: border-box;
+  background-color: white;
+  opacity: 0.9;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
-/* Navigation bar */
-#nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 50, 20, 20, 50;
-  overflow: hidden;
-  background-color: green;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 50;
+/* Center website */
+.book_shelf {
+  max-width: auto;
+  margin: auto;
 }
 
-li {
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 15px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
   float: left;
+  width: 25%;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 19px;
-  text-decoration: none;
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-li a:hover {
-  background-color: orange;
-  text-decoration: underline;
-
+/* Content */
+.content {
+  background-color: black;
+  padding: 10px;
 }
 
-.active {
-  background-color: green;
-  text-decoration: underline;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
 }
 
-/* Book grid CSS */
-  .book1{background:LightSkyBlue;}
-  .book2{background:LightSalmon;}
-  .book3{background:PaleTurquoise;}
-  .book4{background:LightPink;}
-  .book5{background:PaleGreen;}
-  .book6{background:LightSkyBlue;}
-  .book7{background:LightSalmon;}
-  .book8{background:PaleTurquoise;}
-  .book9{background:LightPink;}
-  .book10{background:PaleGreen;}
-  .book11{background:LightSkyBlue;}
-  .book12{background:LightSalmon;}
-
-#books_block {
-  min-height: 60vh;
-  min-width: 60vh;
-  background: rgba(255, 255, 255, .8);
-  justify-content: center;
-  align-content: center;
-  padding: 40 60 40 70px;
-
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
 
-}
-.aboutbookshelf {
-  align: center;
-  font: Black;
-  position: relative;
-  padding-top: 15px;
-}
 
-  .bookshelf{
-    position: relative;
-    font-size: 40px;
-    background:rgba(0, 0, 0, 0.9);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-}
-.books {
-
-}
