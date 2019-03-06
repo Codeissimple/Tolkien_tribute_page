@@ -6,6 +6,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .wrapper {
@@ -48,21 +50,7 @@ html {
 #navigate_div a:hover{
   background-color: orange;
 }
-.article {
-  position: relative;
-  min-height: 60vh;
-  min-width: auto;
-  background: rgba(255, 255, 255, .8);
-  margin-bottom: 20vh;
-}
-.container {
-  position: relative;
-  min-height: 60vh;
-  min-width: auto;
-  background: rgba(255, 255, 255, .8);
-  margin-bottom: 20vh;
 
-}
 /* Applying the same style for the title bloc and a footer */
 .title_block, .my_footer {
      position: relative;
@@ -84,18 +72,70 @@ html {
   align-items: center;
   background: none;
 }
+
 #image {
   border-radius: 50%;
   margin: auto;
   width:200px;
   border: 3px solid green;
   padding: 10px;
-
 }
+
+.article {
+  position: relative;
+  min-height: 60vh;
+  min-width: auto;
+  background: rgba(255, 255, 255, .8);
+  margin-bottom: 20vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  overflow: auto;
+  height: calc(70vh);
+}
+.responsive-image {
+  max-width: 100%;
+}
+.cell img {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .container{
+    overflow: auto;
+    height: calc(70vh);
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container{
+    overflow: auto;
+    max-height: 80vh;
+  }
+  .cell {
+    width: calc(33.3333% - 2rem);
+  }
+}
+
+.cell {
+  margin: 1rem;
+}
+
 /*================
 ==================
 ==================
 */
-
-
 
