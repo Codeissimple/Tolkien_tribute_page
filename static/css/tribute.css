@@ -48,7 +48,13 @@ html {
 #navigate_div a:hover{
   background-color: orange;
 }
-
+.article {
+  position: relative;
+  min-height: 60vh;
+  min-width: auto;
+  background: rgba(255, 255, 255, .8);
+  margin-bottom: 20vh;
+}
 .container {
   position: relative;
   min-height: 60vh;
@@ -61,28 +67,35 @@ html {
 .title_block, .my_footer {
      position: relative;
      width: auto;
-     display:block;
+     display:flex;
      padding: 20px;
      margin-bottom: 20px;
      margin-top: 30px;
      background: rgba(255, 255, 255, .8);
-     justify-items: center;
 }
 
 #logo {
   margin-bottom: 10vh;
 }
 
+.title_block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
 #image {
   border-radius: 50%;
   margin: auto;
-  width: 50%;
+  width:200px;
   border: 3px solid green;
   padding: 10px;
+
 }
 /*================
 ==================
 ==================
 */
+
 
 
